@@ -1,0 +1,68 @@
+<!doctype>
+<html>
+    <head>
+        <title>
+            </title>
+            <script>
+           function display(val)
+            {
+              if (val=="=")
+              {
+                var ch=(cal.txt.value).charAt(((cal.txt.value).length)-1);
+                if (ch=='+' || ch=='-' || ch=='*' || ch=='/')
+                cal.txt.value="0";
+                else
+                cal.txt.value=eval(cal.txt.value);
+              }
+               else if (val=="RES") 
+              cal.txt.value="";
+              else 
+              cal.txt.value=cal.txt.value+val; 
+              
+            }
+         </script>
+         <style>
+           body
+           {
+             background-color:grey;
+             margin: auto auto;
+             max-width: 50em;
+           }
+           form{
+             padding:100px;
+             height:800px;
+             width:800px;
+           }
+           form *{
+             height:100px;
+             width:100px;
+           }
+           #print{
+             width:411px;
+             height:100px;
+           }
+         </style>
+    </head>
+    <body>
+        </body>
+        <form name="cal" id="calcu">
+        <input type ="text" name="txt" id="print"></br>
+        <input type="button" name="button1" value="1" onclick="display(button1.value)">
+        <input type="button" name="button2" value="2" onclick="display(button2.value)" >
+        <input type="button" name="button3" value="3"  onclick="display(button3.value)">
+        <input type="button" name="button4" value="4"onclick="display(button4.value)" ><br/>
+        <input type="button" name="button5" value="5" onclick="display(button5.value)" >
+        <input type="button" name="button6" value="6" onclick="display(button6.value)" >
+        <input type="button" name="button7" value="7" onclick="display(button7.value)">
+        <input type="button" name="button8" value="8" onclick="display(button8.value)"></br>
+        <input type="button" name="button9" value="9"onclick="display(button9.value)" >
+        <input type="button" name="button0" value="0"onclick="display(button0.value)" >
+        <input type="button" name="buttonplus" value="+" onclick="display(buttonplus.value)">
+        <input type="button" name="buttonsub" value="-" onclick="display(buttonsub.value)"></br>
+        <input type="button" name="buttonmul" value="*" onclick="display(buttonmul.value)">
+        <input type="button" name="buttondiv" value="/" onclick="display(buttondiv.value)">
+        <input type="button" name="buttonequal"  value="=" onclick="display(buttonequal.value)">
+        <input type="button" name="buttonreset"  value="RES" onclick="display(buttonreset.value)">
+        </form>
+    </body>
+</html>
