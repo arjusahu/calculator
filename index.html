@@ -22,19 +22,27 @@
             }
          </script>
          <style>
-           body
-           {
-             background-color:gray;
-            
+           *{
+             margin:0px;
+             padding:0px;
+             box-sizing: border-box;
            }
-           form{
-             
-             height:800px;
-             width:800px;
-             position:fixed;
-             left:38%;
-             top:10%
-             
+          
+           .container
+           {
+             background-color:blueviolet;
+              width:100vw;
+             height:100vh; 
+            position:relative;
+           }
+           .inner{
+             height:500px;
+             width:412px;
+             position:relative;
+             left:50%;
+             top:50%;
+              transform:translate(-50%,-50%); 
+    
              
            }
            form *{
@@ -42,18 +50,21 @@
              width:100px;
              font-size:30px;
              border:1px solid white;
-             box-shadow:-5px -5px 20px black,5px 5px 20px black;
+             box-shadow:-5px 5px 30px black;
            }
            #print{
              width:412px;
              height:100px;
+             background-color: rgb(187, 210, 230);
              border:1px solid white;
-             box-shadow:-5px -5px 20px black,5px 5px 20px black;
+             box-shadow:-5px 5px 30px  black;
            }
          </style>
     </head>
     <body>
         </body>
+        <div class="container">
+          <div class="inner">
         <form name="cal" id="calcu">
         <input type ="text" name="txt" id="print"></br>
         <input type="button" name="button1" value="1" onclick="display(button1.value)">
@@ -72,7 +83,8 @@
         <input type="button" name="button0" value="0"onclick="display(button0.value)" >
         <input type="button" name="buttonreset"  value="RES" onclick="display(buttonreset.value)">
         <input type="button" name="buttondiv" value="/" onclick="display(buttondiv.value)">
-
         </form>
+        </div>
+        </div>
     </body>
 </html>
